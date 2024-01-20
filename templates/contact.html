@@ -1,0 +1,67 @@
+{% extends 'layouts/base.html'%}
+{% load static %}
+{% block content %}
+      <!-- Section Contact -->
+      <section id="contact" class="pages pb-0">
+         <div class="jumbotron"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;" >
+            <!-- Heading -->
+            <div class="jumbo-heading" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+               <h1>Contact Us</h1>
+            </div>
+         </div>
+         <!-- container -->
+         <div class="container">
+            <div class="row">
+               <!-- Contact Info -->
+               <div class="col-lg-5">
+               {% for i in contacts %}
+                  <h2>Information </h2>
+                  <ul class="list-inline">
+                     <li><i class="fa fa-envelope"></i><a href="{{i.email}}">{{i.email}}</a></li>
+                     <li><i class="fa fa-phone margin-icon"></i>tel{{i.phone}}</li>
+                     <li><i class="fa fa-map-marker margin-icon"></i>{{i.address}}</li>
+                  </ul>
+                  <!-- address info -->
+                  <p>Elit uasi quidem minus id omnis a nibh fusce mollis imperdie tlorem ipuset phas ellus ac sodales Lorem ipsum dolor Phas ellus 
+                     adipisicing elit uasi quidem minus id omnis a nibh fusce mollis imperdie tlorem ipuset campas fincas
+                  </p>
+                  <img src="{% static 'img/petz.jpg'%}" alt="" class="img-rounded center-block img-fluid">  
+               {% endfor %}           
+               </div>
+               <!-- /col-lg-5-->
+               <!-- Contact Form -->
+               <div class="col-lg-6 offset-lg-1 res-margin"> 
+                  <h3>Write us</h3>
+                  <form id="contact-forms" method="POST">
+                     {% csrf_token %}
+                  <!-- Form Starts -->
+                     <div id="contact-form">
+                        <div class="form-group">
+                           <label>Name<span class="required" for="contact-name">*</span></label>
+                           <input type="text" name="name" class="form-control input-field" required="" id="contact-name">                    
+                           <label>Email Adress <span class="required" for="contact-email">*</span></label>
+                           <input type="text" name="email" class="form-control input-field" required="" id="contact-email">                            
+                           <label>Message<span class="required" for="contact-message">*</span></label>
+                           <textarea name="message" class="textarea-field form-control" rows="3"  required="" id="contact-message"></textarea>
+                        </div>
+                        <button type="submit" id="contact-submit-btn" value="Submit" class="btn center-block">Send message</button>
+                        <p class="form-messege"></p>
+                     </div>
+                  <!-- Contact results -->
+                  <div id="contact_results"></div>
+               </div>
+               <!--/col-lg-6 -->             
+            </div>
+            <!-- /row-->
+         </div>
+         <!-- /container-->
+         <div class="container-fluid margin1">
+            <!-- map-->
+            <div id="map-canvas"></div>
+         </div>
+         <!-- /container-fluid-->
+      </section>
+      <!-- /Section ends -->
+      <!-- Footer -->		
+
+{% endblock %}
