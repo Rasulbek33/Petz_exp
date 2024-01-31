@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="">
    <head>
@@ -10,7 +10,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- Page title -->
-      <title>Petz - Pet HTML5 Template</title>
+      <title>{% translate 'Petz'%}</title>
       <!--[if lt IE 9]>
       <script src="js/respond.js"></script>
       <![endif]-->
@@ -58,52 +58,57 @@
             <div class="collapse navbar-collapse" id="navbar">
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Home
+                     <a class="nav-link dropdown-toggle" href="{% url 'main:Home'%}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                     {% translate 'Home'%}
                      </a>
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li class="dropdown-item" ><a href="index.html">Home with Slider 1</a></li>
-                        <li class="dropdown-item"><a href="index-layerslider1.html">Home with Slider 2</a></li>
-                        <li class="dropdown-item"><a href="index-layerslider2.html">Home with Slider 3</a></li>
-                        <li class="dropdown-item"><a href="index-parallax.html">Home with Parallax</a></li>
-                        <li class="dropdown-item"><a href="index-video.html">Home with Video</a></li>
+                        <li class="dropdown-item" ><a href="{% url 'main:Home'%}">{% translate 'Home with Slider 1'%}</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="about.html">About</a>
+                     <a class="nav-link" href="about.html">{% translate 'About'%}</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Pages
+                     {% translate 'Pages'%}
                      </a>
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                        <li class="dropdown-item"> <a href="adoption.html">Adoption</a></li>
-                        <li class="dropdown-item"><a href="adopt-single.html">Adoption Single</a></li>
-                        <li class="dropdown-item"><a href="services.html">Our Services</a></li>
+                        <li class="dropdown-item"> <a href="adoption.html">{% translate 'Adoption'%}</a></li>
+                        <li class="dropdown-item"><a href="adopt-single.html">{% translate 'Adoption Single'%}</a></li>
+                        <li class="dropdown-item"><a href="services.html">{% translate 'Our Services'%}</a></li>
                         <li class="dropdown-item"><a href="services-single.html">Services Single</a></li>
-                        <li class="dropdown-item"><a href="team.html">Our Team</a></li>
-                        <li class="dropdown-item"><a href="pricing.html">Pricing</a></li>
-                        <li class="dropdown-item"><a href="testimonials.html">Testimonials</a></li>
-                        <li class="dropdown-item"><a href="elements.html">Elements</a></li>
+                        <li class="dropdown-item"><a href="team.html">{% translate 'Our Team'%}</a></li>
+                        <li class="dropdown-item"><a href="pricing.html">{% translate 'Pricing'%}</a></li>
+                        <li class="dropdown-item"><a href="testimonials.html">{% translate 'Testimonials'%}</a></li>
+                        <li class="dropdown-item"><a href="elements.html">{% translate 'Elements'%}</a></li>
                      </ul>
                   </li>
                </ul>
                <ul class="navbar-nav navbar-right">
                   <li class="nav-item">
-                     <a class="nav-link" href="gallery.html">Gallery</a>
+                     <a class="nav-link" href="gallery.html">{% translate 'Gallery'%}</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                      Blog
                      </a>
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        <li class="dropdown-item"><a href="blog.html">Blog Home</a></li>
-                        <li class="dropdown-item"><a href="blog-single.html">Blog Post</a></li>
+                        <li class="dropdown-item"><a href="{% url 'blog:blog'%}">{% translate 'Blog Home'%}</a></li>
+                        <li class="dropdown-item"><a href="blog-single.html">{% translate 'Blog Post'%}</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="{% url 'contact:contact'%}">Contact</a>
+                     <a class="nav-link" href="{% url 'contact:contact'%}">{% translate 'Contact'%}</a>
                   </li>
+                  <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/uz/" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     translate
+                  </a>
+                     <!-- <li class="nav-item dropdown"> -->
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                           <li class="dropdown-item"><a href="http://127.0.0.1:8000/uz/">o'zbek</a></li>
+                           <li class="dropdown-item"><a href="http://127.0.0.1:8000">english</a></li>
+                        </ul>
+                  <!-- </li>    -->
                </ul>
             </div>
          </div>
@@ -130,12 +135,12 @@
                  <ul class="list-unstyled">
                     <li><i class="fa fa-phone"></i>(000) 000-000</li>
                     <li><i class="fa fa-envelope"></i>Email: <a href="mailto:your@email.com">site@email.com</a></li>
-                    <li><i class="fa fa-map-marker"></i>123 Anywhere Street, London, LO4 6ON</li>
+                    <li><i class="fa fa-map-marker"></i>{% translate '123 Anywhere Street, London, LO4 6ON'%}</li>
                  </ul>
               </div>
               <!-- /.col-lg-4 -->
               <div class="col-lg-4 text-center res-margin">
-                 <h5>Follow us</h5>
+                 <h5>{% translate 'Follow us'%}</h5>
                  <!--Social icons -->
                  <div class="social-media">
                     <a href="#" title=""><i class="fab fa-twitter"></i></a>
@@ -150,7 +155,7 @@
         <!-- /.container -->
         <!-- Credits-->
         <div class="credits col-lg-12 text-center">
-           Copyright © 2017-2023 Designed by <a href="http://www.ingridkuhn.com">Ingrid Kuhn</a>
+           {% translate 'Copyright © 2017-2023 Designed by'%} <a href="http://www.ingridkuhn.com">Ingrid Kuhn</a>
            <!-- Go To Top Link -->
            <div class="hidden-sm d-none d-lg-block">
               <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>

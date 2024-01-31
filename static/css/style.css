@@ -1825,7 +1825,7 @@ ul.breadcrumb {
 
 /* Labels */
 
-..badge {
+.badge {
 	padding: .2em .6em .3em;
 	font-size: 16px;
 	font-weight: 600;
@@ -2373,14 +2373,14 @@ blockquote:before {
 	margin-top: 2em;
 	text-align: center;
 	margin-bottom: 12em;
-	background: url('img/jumbotron.jpg');
+	background-image: url('/static/img/petz.jpg');
 	border-bottom-left-radius: 25%;
 	border-bottom-right-radius: 25%;
 }
 
 .jumbotron .jumbo-heading {
 	padding: 40px 70px;
-	background-image: url('static/img/illustrations/pattern.png');
+	background-image: url('/static/img/illustrations/pattern.png');
 	margin-top: 290px;
 	display: inline-block;
 	border-radius: 50%;

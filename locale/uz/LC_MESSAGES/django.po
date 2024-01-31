@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-23 16:43+0500\n"
+"PO-Revision-Date: 2024-01-23 16:46+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: contact/abstract.py:14
+msgid "active"
+msgstr "faol"
+
+#: contact/abstract.py:21
+msgid "order"
+msgstr ""
+"\n"
+"buyurtma"
+
+#: contact/models.py:7
+msgid "name"
+msgstr "ism"
+
+#: contact/models.py:8 contact/models.py:22
+msgid "email"
+msgstr "email"
+
+#: contact/models.py:9
+msgid "message"
+msgstr "xabar"
+
+#: contact/models.py:16
+msgid "Contacts form"
+msgstr "Kontaktlar shakli"
+
+#: contact/models.py:20
+msgid "maps"
+msgstr "harita"
+
+#: contact/models.py:21
+msgid "phone"
+msgstr "telefon"
+
+#: contact/models.py:23
+msgid "website"
+msgstr "website"
+
+#: contact/models.py:24
+msgid "address"
+msgstr "manzil"
+
+#: contact/models.py:28
+msgid "Contacts"
+msgstr "kontakt"
+
+#: main/models.py:21 templates/layouts/base.html:62
+msgid "Home"
+msgstr "uy"
+
+#: main/models.py:22
+msgid "Homes"
+msgstr "uylar"
+
+#: templates/home.html:24
+msgid "our services"
+msgstr "bizning xizmatlar"
+
+#: templates/home.html:37
+msgid "We Love Pets!"
+msgstr ""
+
+#: templates/home.html:39 templates/home.html:55
+msgid "We offer all the best quality products for your best friend."
+msgstr ""
+
+#: templates/home.html:40
+msgid "our Blog"
+msgstr ""
+
+#: templates/home.html:53
+msgid "Amazing Services"
+msgstr "bizning xizmatimiz"
+
+#: templates/home.html:56
+msgid "About Us"
+msgstr "Haqida"
+
+#: templates/home.html:102
+msgid "Exotic Pets"
+msgstr ""
+
+#: templates/home.html:103 templates/home.html:122 templates/home.html:141
+msgid ""
+"Nulla vel metus scelerisque ante sollicitudinlorem ipsuet commodo. Cras "
+"purus odio, vestibulum in vulputate a Imperdiet interdum donec eget metus "
+"auguen unc vel lorem."
+msgstr ""
+
+#: templates/home.html:105
+msgid "Read More"
+msgstr ""
+
+#: templates/home.html:121
+msgid "Vet Services"
+msgstr "bizning xizmatlar"
+
+#: templates/home.html:140
+msgid "Great Products"
+msgstr ""
+
+#: templates/layouts/base.html:13
+msgid "Petz"
+msgstr "uy_hayvonlari"
+
+#: templates/layouts/base.html:65
+msgid "Home with Slider 1"
+msgstr "Slayder 1 bilan uy"
+
+#: templates/layouts/base.html:69
+msgid "About"
+msgstr "Haqida"
+
+#: templates/layouts/base.html:73
+msgid "Pages"
+msgstr "sahifa"
+
+#: templates/layouts/base.html:76
+msgid "Adoption"
+msgstr "asrab olmoq"
+
+#: templates/layouts/base.html:77
+msgid "Adoption Single"
+msgstr "asrab olish"
+
+#: templates/layouts/base.html:78
+msgid "Our Services"
+msgstr "bizning xizmatlar"
+
+#: templates/layouts/base.html:80
+msgid "Our Team"
+msgstr "bizning jamoa"
+
+#: templates/layouts/base.html:81
+msgid "Pricing"
+msgstr "narx"
+
+#: templates/layouts/base.html:82
+msgid "Testimonials"
+msgstr "guvoh"
+
+#: templates/layouts/base.html:83
+msgid "Elements"
+msgstr "element"
+
+#: templates/layouts/base.html:89
+msgid "Gallery"
+msgstr "rasmlar"
+
+#: templates/layouts/base.html:96
+msgid "Blog Home"
+msgstr "Blog uyi"
+
+#: templates/layouts/base.html:97
+msgid "Blog Post"
+msgstr "postlar"
+
+#: templates/layouts/base.html:101
+msgid "Contact"
+msgstr "Aloqa"
+
+#: templates/layouts/base.html:137
+msgid "123 Anywhere Street, London, LO4 6ON"
+msgstr "123 london kochasining LO4 60N joyida"
+
+#: templates/layouts/base.html:142
+msgid "Follow us"
+msgstr "Ortimizdan yuring"
+
+#: templates/layouts/base.html:157
+msgid "Copyright © 2017-2023 Designed by"
+msgstr "Mualliflik huquqi © 2017-2023 tomonidan ishlab chiqilgan"
