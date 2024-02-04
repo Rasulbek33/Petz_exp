@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 16:43+0500\n"
-"PO-Revision-Date: 2024-01-23 16:46+0500\n"
+"POT-Creation-Date: 2024-02-03 16:08+0500\n"
+"PO-Revision-Date: 2024-02-03 16:12+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uz\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Bookmarks: -1,24,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: contact/abstract.py:14
 msgid "active"
@@ -25,9 +26,7 @@ msgstr "faol"
 
 #: contact/abstract.py:21
 msgid "order"
-msgstr ""
-"\n"
-"buyurtma"
+msgstr "buyurtma"
 
 #: contact/models.py:7
 msgid "name"
@@ -65,7 +64,7 @@ msgstr "manzil"
 msgid "Contacts"
 msgstr "kontakt"
 
-#: main/models.py:21 templates/layouts/base.html:62
+#: main/models.py:21 templates/blog.html:18 templates/layouts/base.html:62
 msgid "Home"
 msgstr "uy"
 
@@ -73,33 +72,82 @@ msgstr "uy"
 msgid "Homes"
 msgstr "uylar"
 
+#: templates/blog.html:9
+#, fuzzy
+#| msgid "Blog Home"
+msgid "Blog"
+msgstr "Blog uyi"
+
+#: templates/blog.html:19 templates/layouts/base.html:96
+msgid "Blog Home"
+msgstr "Blog uyi"
+
+#: templates/blog.html:80
+msgid "Search"
+msgstr "Qidirish"
+
+#: templates/blog.html:85
+msgid "Go!"
+msgstr "Oldinga!"
+
+#: templates/blog.html:94
+msgid "Latest Posts"
+msgstr "Eng so'nggi xabarlar"
+
+#: templates/blog.html:112
+#, fuzzy
+#| msgid "About Us"
+msgid "About us"
+msgstr "Haqida"
+
+#: templates/blog.html:126
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+#: templates/blog.html:129
+#, fuzzy
+#| msgid "Our Services"
+msgid "Our Offers"
+msgstr "bizning xizmatlar"
+
+#: templates/blog.html:131
+msgid "Events and News"
+msgstr "Voqealar va Yangiliklar"
+
+#: templates/blog.html:133
+msgid "Cats and Dogs"
+msgstr "mushuklar va itlar"
+
+#: templates/blog.html:135 templates/home.html:102
+msgid "Exotic Pets"
+msgstr "Ekzotik uy hayvonlari"
+
+#: templates/blog.html:143
+msgid "Tags"
+msgstr "Teglar"
+
 #: templates/home.html:24
 msgid "our services"
 msgstr "bizning xizmatlar"
 
-#: templates/home.html:37
-msgid "We Love Pets!"
-msgstr ""
-
-#: templates/home.html:39 templates/home.html:55
-msgid "We offer all the best quality products for your best friend."
-msgstr ""
-
 #: templates/home.html:40
 msgid "our Blog"
-msgstr ""
+msgstr "bizning blogimiz"
 
 #: templates/home.html:53
 msgid "Amazing Services"
 msgstr "bizning xizmatimiz"
 
+#: templates/home.html:55
+msgid "We offer all the best quality products for your best friend."
+msgstr ""
+"\n"
+"Sizning eng yaxshi do'stingiz uchun barcha eng sifatli mahsulotlarni "
+"taklif etamiz."
+
 #: templates/home.html:56
 msgid "About Us"
 msgstr "Haqida"
-
-#: templates/home.html:102
-msgid "Exotic Pets"
-msgstr ""
 
 #: templates/home.html:103 templates/home.html:122 templates/home.html:141
 msgid ""
@@ -107,10 +155,13 @@ msgid ""
 "purus odio, vestibulum in vulputate a Imperdiet interdum donec eget metus "
 "auguen unc vel lorem."
 msgstr ""
+"Nulla vel metus scelerisque ante sollicitudinlorem ipsuet commodo. Cras "
+"purus odio, vestibulum in vulputate a Imperdiet interdum donec eget metus "
+"auguen unc vel lorem."
 
 #: templates/home.html:105
 msgid "Read More"
-msgstr ""
+msgstr "Ko'proq o'qish"
 
 #: templates/home.html:121
 msgid "Vet Services"
@@ -118,7 +169,7 @@ msgstr "bizning xizmatlar"
 
 #: templates/home.html:140
 msgid "Great Products"
-msgstr ""
+msgstr "Ajoyib mahsulotlar"
 
 #: templates/layouts/base.html:13
 msgid "Petz"
@@ -168,10 +219,6 @@ msgstr "element"
 msgid "Gallery"
 msgstr "rasmlar"
 
-#: templates/layouts/base.html:96
-msgid "Blog Home"
-msgstr "Blog uyi"
-
 #: templates/layouts/base.html:97
 msgid "Blog Post"
 msgstr "postlar"
@@ -180,14 +227,14 @@ msgstr "postlar"
 msgid "Contact"
 msgstr "Aloqa"
 
-#: templates/layouts/base.html:137
+#: templates/layouts/base.html:138
 msgid "123 Anywhere Street, London, LO4 6ON"
 msgstr "123 london kochasining LO4 60N joyida"
 
-#: templates/layouts/base.html:142
+#: templates/layouts/base.html:143
 msgid "Follow us"
 msgstr "Ortimizdan yuring"
 
-#: templates/layouts/base.html:157
+#: templates/layouts/base.html:158
 msgid "Copyright © 2017-2023 Designed by"
 msgstr "Mualliflik huquqi © 2017-2023 tomonidan ishlab chiqilgan"

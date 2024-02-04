@@ -11,7 +11,7 @@
          <!--Slider -->
          <div class="slider">
             <!-- Slide 0 -->
-            <div class="slide slide-0 active" style="background-image:url('{% static 'img/Home.jpg'%}')">
+            <div class="slide slide-0 active" style="background-image:url('{% static 'img/petz.jpg'%}')">
                <div class="slide__bg"></div>
                <div class="slide__content my-auto">
                   <div class="slide__overlay">
@@ -27,23 +27,23 @@
                </div>
             </div>
             <!-- Slide 1 -->
-            <div class="slide slide-1" style="background-image:url('img/slide1.jpg')">
+            <div class="slide slide-1" style="background-image:url('{% static 'img/Home.jpg'%}')">
                <div class="slide__bg"></div>
                <div class="slide__content">
                   <div class="slide__overlay">
                   </div>
                   <!-- slide text-->
                   <div class="slide__text">
-                     <h1 class="slide__text-heading">{% translate 'We Love Pets!'%}</h1>
+                     <h1 class="slide__text-heading">{{i.title}}</h1>
                      <div class="hidden-mobile">
-                        <p class="lead">{% translate 'We offer all the best quality products for your best friend.'%}</p>
+                        <p class="lead">{{ i.sub_title}}</p>
                         <a href="blog.html" class="btn btn-default">{% translate 'our Blog'%}</a>
                      </div>
                   </div>
                </div>
             </div>
             <!-- Slide 2 -->
-            <div class="slide slide-2" style="background-image:url('img/slide2.jpg')">
+            <div class="slide slide-2" style="background-image:url('{% static 'img/petz_cat.jpg'%}')">
                <div class="slide__bg"></div>
                <div class="slide__content">
                   <div class="slide__overlay">

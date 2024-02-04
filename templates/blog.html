@@ -1,12 +1,12 @@
 {% extends 'layouts/base.html'%}
-{% load static %}
+{% load static i18n %}
 {% block content %}
       <!-- Section Blog -->
       <section id="blog" class="pages">
          <div class="jumbotron"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
             <!-- Heading -->
             <div class="jumbo-heading"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
-               <h1>Blog</h1>
+               <h1>{% translate 'Blog'%}</h1>
             </div>
          </div>
          <!-- container -->
@@ -15,13 +15,14 @@
                <div class="col-lg-12">
                   <!-- Breadcrumb -->
                   <ul class="breadcrumb">
-                     <li><a href="{% url 'main:Home'%}">Home</a> <span class="divider"></span></li>
-                     <li class="active">Blog Home</li>
+                     <li><a href="{% url 'main:Home'%}">{% translate 'Home'%}</a> <span class="divider"></span></li>
+                     <li class="active">{% translate 'Blog Home'%}</li>
                   </ul>
                </div>
                <!-- /col-lg-12 -->
                <!-- Blog Home -->
                <div id="blog-container" class="col-xl-9">
+
                   <!-- Blog Post 1 -->
                   <div class="blog-post row">
                   {% for i in object_list %}
@@ -37,6 +38,7 @@
                            <img class="img-fluid" src="{{ i.photo.url }}" alt="">
                            </a>
                         </div>
+                    
                      </div>
                      <div class="col-lg-12">
                         <!-- Post header -->
@@ -45,79 +47,25 @@
                         </h2>
                         <div class="post-info">
                            <!-- Post Author -->
-                           <p><i class="fa fa-user"></i>by <a href="#">{{ obj.author }}</a></p>
+                           <p><i class="fa fa-user"></i>by <a href="#">{{ i.author }}</a></p>
                            <!-- Post Comments -->
                            <p><i class="fa fa-comment"></i><a href="#">12 Comments</a></p>
                         </div>
                         <!-- Post Excerpt -->
                         <p>{{ i.photo_sub_title}}</p>
                         <a class="btn" href="blog-single.html">Read More <i class="fa fa-angle-right"></i></a>
-                     {% endfor %}
+
                      </div>
+                  {% endfor %}
                   </div>
                   <!-- /.row -->
                   <!-- Blog Post 2 -->
-                  <div class="blog-post row">
-                     <div class="img-date">
-                        <!-- date and category -->
-                        <div class="col-lg-1 text-center date-category">
-                           <i class="fa fa-film fa-2x"></i>
-                           <p>June 17, 2023</p>
-                        </div>
-                        <!-- blog image -->
-                        <div class="img-blog">
-                           <a href="blog-single.html">
-                           <img class="img-fluid" src="img/blog2.jpg" alt="">
-                           </a>
-                        </div>
-                     </div>
-                     <div class="col-lg-12">
-                        <!-- Post header -->
-                        <h2>
-                           <a href="blog-single.html">Child Friendly Pets</a>
-                        </h2>
-                        <div class="post-info">
-                           <!-- Post Author -->
-                           <p><i class="fa fa-user"></i>by <a href="#">John Doe</a></p>
-                           <!-- Post Comments -->
-                           <p><i class="fa fa-comment"></i><a href="#">34 Comments</a></p>
-                        </div>
-                        <!-- Post Excerpt -->
-                        <p>Lorem perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero. ipsum dolor sit amet commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <a class="btn" href="blog-single.html">Read More <i class="fa fa-angle-right"></i></a>
-                     </div>
-                  </div>
+                 
                   <!-- /.row -->
                   <!-- Blog Post 3 -->
                   <div class="blog-post row">
-                     <div class="img-date">
-                        <!-- date and category -->
-                        <div class="col-lg-1 text-center date-category">
-                           <i class="fa fa-file fa-2x"></i>
-                           <p>June 17, 2023</p>
-                        </div>
-                        <!-- blog image -->
-                        <div class="img-blog">
-                           <a href="blog-single.html">
-                           <img class="img-fluid" src="img/blog3.jpg" alt="">
-                           </a>
-                        </div>
-                     </div>
-                     <div class="col-lg-12">
-                        <!-- Post header -->
-                        <h2>
-                           <a href="blog-single.html">Taking care of a puppy</a>
-                        </h2>
-                        <div class="post-info">
-                           <!-- Post Author -->
-                           <p><i class="fa fa-user"></i>by <a href="#">John Doe</a></p>
-                           <!-- Post Comments -->
-                           <p><i class="fa fa-comment"></i><a href="#">24 Comments</a></p>
-                        </div>
-                        <!-- Post Excerpt -->
-                        <p>Lorem perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero. ipsum dolor sit amet commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <a class="btn" href="blog-single.html">Read More <i class="fa fa-angle-right"></i></a>
-                     </div>
+
+                     
                   </div>
                   <!-- /.row -->
 
@@ -125,14 +73,16 @@
                <!-- /blog-container -->
                <!-- Sidebar Column -->
                <div class="sidebar col-xl-3">
+
                   <!-- Blog Search -->
                   <div class="card">
-                     <h5 class="sidebar-header">Search</h5>
+                     
+                     <h5 class="sidebar-header">{% translate 'Search'%}</h5>
                      <div class="form-group">
                         <div class="input-group">
                            <input type="text" class="form-control">
                            <span class="input-group-btn">
-                           <button class="btn btn-default" type="button">Go!</button>
+                           <button class="btn btn-default" type="button">{% translate 'Go!'%}</button>
                            </span>
                         </div>
                         <!-- /input-group -->
@@ -141,45 +91,26 @@
                   </div>
                   <!-- /card -->
                   <div class="card">
-                  <!-- {% for obj in object_list %} -->
-                     <h5 class="sidebar-header">Latest Posts</h5>
+                     <h5 class="sidebar-header">{% translate 'Latest Posts'%}</h5>
                      <!-- Blog latest posts 1 -->
                      <div class="blog-latest row">
+                     {% for i in object_list %}
                         <div class="col-sm-5">
-                           <img src="{{ obj.photo.url }}" alt="" class="rounded-circle img-fluid">
+                           <img src="{{ i.lates_photo.url }}" alt="" class="rounded-circle img-fluid">
                         </div>
                         <div class="col-sm-7 my-auto">
-                           <h6><a href="blog-post.html">{{ obj.news }}</a></h6>
-                           <p>{{ obj.created_at|date:"F d, Y" }}</p>
+                           <h6><a href="blog-post.html">{{ i.news }}</a></h6>
+                           <p>{{ i.created_at|date:"F d, Y" }}</p>
                         </div>
+                     {% endfor %}
                      </div>
                      <!-- Blog latest posts 2 -->
-                     <div class="blog-latest row">
-                        <div class="col-sm-5">
-                           <img src="{{ obj.photo.url }}" alt="" class="rounded-circle img-fluid">
-                        </div>
-                        <div class="col-sm-7 my-auto">
-                           <h6><a href="blog-post.html">{{ obj.news }}</a></h6>
-                           <p>{{ obj.created_at|date:"F d, Y" }}</p>
-                        </div>
-                     </div>
-                     <!-- Blog latest posts 3 -->
-                     <div class="blog-latest row">
-                        <div class="col-sm-5">
-                           <img src="{{ obj.photo.url }}" alt="" class="rounded-circle img-fluid">
-                        </div>
-                        <div class="col-sm-7 my-auto">
-                           <h6><a href="blog-post.html">{{ obj.news }}</a></h6>
-                           <p>{{ obj.created_at|date:"F d, Y" }}</p>
-                        </div>
-                     </div>
-                  <!-- {% endfor %}  -->
                   </div>
                   <!-- /card -->
                   <!-- About us Widget -->
                   <div class="card">
-                     <h5 class="sidebar-header">About Us</h5>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium.</p>
+                     <h5 class="sidebar-header">{% translate 'About us'%}</h5>
+                     <p>{{ i.text }}</p>
                      <!-- Social Media icons -->
                      <div class="social-media smaller">
                         <a href="#" title=""><i class="fab fa-twitter"></i></a>
@@ -192,16 +123,16 @@
                   <!-- /card -->
                   <!-- Blog Categories -->
                   <div class="card">
-                     <h5 class="sidebar-header">Categories</h5>
+                     <h5 class="sidebar-header">{% translate 'Categories'%}</h5>
                      <div class="row">
                         <ul class="list-unstyled">
-                           <li><a href="#">Our Offers</a>
+                           <li><a href="#">{% translate 'Our Offers'%}</a>
                            </li>
-                           <li><a href="#">Events and News</a>
+                           <li><a href="#">{% translate 'Events and News'%}</a>
                            </li>
-                           <li><a href="#">Cats and Dogs</a>
+                           <li><a href="#">{% translate 'Cats and Dogs'%}</a>
                            </li>
-                           <li><a href="#">Exotic Pets</a>
+                           <li><a href="#">{% translate 'Exotic Pets'%}</a>
                            </li>
                         </ul>
                      </div>
@@ -209,12 +140,12 @@
                   <!-- /card -->
                   <!-- Tags Widget -->
                   <div class="card">
-                     <h5 class="sidebar-header">Tags</h5>
+                     <h5 class="sidebar-header">{% translate 'Tags'%}</h5>
                      <div class="blog-tags">
                         <a href="#">Puppy</a> <a href="#">Cats</a> <a href="#">Dog Food</a> <a href="#">Veterinarian</a> <a href="#">Activity</a> <a href="#">Birds</a> <a href="#">Offer</a>
                      </div>
                   </div>
-                  <!-- /card -->
+
                </div>
                <!-- /sidebar  -->		    <!-- Pagination -->
                <nav aria-label="Page navigation ">
@@ -229,7 +160,6 @@
                </nav>
             </div>
             <!-- /row-->
-
          </div>
          <!-- /container-->
       </section>
