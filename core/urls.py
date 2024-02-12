@@ -9,7 +9,8 @@ urlpatterns = [
     path('', include('contact.urls')),
     path('', include('main.urls', namespace='default_1')),
     path('', include('blog.urls', namespace='default_2')),
-    path('', include('about.urls'))
+    path('', include('about.urls')),
+    path('', include('gallery.urls'))
 ]
 
 

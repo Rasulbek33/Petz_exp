@@ -30,6 +30,7 @@ CUSTOM_APPS = [
     'main',
     'blog',
     'about',
+    'gallery',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
