@@ -865,7 +865,7 @@ ul.slider-pagi {
 ============================ */
 
 #reviews {
-	background-image: url(../img/reviews1.png);
+	background-image: url(/img/reviews1.png);
 	background-repeat: no-repeat;
 	background-position: -10% bottom;
 }

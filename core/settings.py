@@ -31,6 +31,8 @@ CUSTOM_APPS = [
     'blog',
     'about',
     'gallery',
+    'adoption',
+    'our_services'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS

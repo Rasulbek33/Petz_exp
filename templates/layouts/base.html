@@ -73,14 +73,8 @@
                      {% translate 'Pages'%}
                      </a>
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                        <li class="dropdown-item"> <a href="adoption.html">{% translate 'Adoption'%}</a></li>
-                        <li class="dropdown-item"><a href="adopt-single.html">{% translate 'Adoption Single'%}</a></li>
-                        <li class="dropdown-item"><a href="services.html">{% translate 'Our Services'%}</a></li>
-                        <li class="dropdown-item"><a href="services-single.html">Services Single</a></li>
-                        <li class="dropdown-item"><a href="team.html">{% translate 'Our Team'%}</a></li>
-                        <li class="dropdown-item"><a href="pricing.html">{% translate 'Pricing'%}</a></li>
-                        <li class="dropdown-item"><a href="testimonials.html">{% translate 'Testimonials'%}</a></li>
-                        <li class="dropdown-item"><a href="elements.html">{% translate 'Elements'%}</a></li>
+                        <li class="dropdown-item"> <a href="{% url 'adoption:adoption'%}">{% translate 'Adoption'%}</a></li>
+                        <li class="dropdown-item"><a href="{% url 'our_services:our_services'%}">{% translate 'Our Services'%}</a></li>
                      </ul>
                   </li>
                </ul>
@@ -94,7 +88,6 @@
                      </a>
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <li class="dropdown-item"><a href="{% url 'blog:blog'%}">{% translate 'Blog Home'%}</a></li>
-                        <li class="dropdown-item"><a href="blog-single.html">{% translate 'Blog Post'%}</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">

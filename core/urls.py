@@ -10,7 +10,9 @@ urlpatterns = [
     path('', include('main.urls', namespace='default_1')),
     path('', include('blog.urls', namespace='default_2')),
     path('', include('about.urls')),
-    path('', include('gallery.urls'))
+    path('', include('gallery.urls')),
+    path('', include('adoption.urls')),
+    path('', include('our_services.urls'))
 ]
 
 

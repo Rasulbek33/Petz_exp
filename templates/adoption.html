@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html'%}
+{% load static %}
+{% block content %}
+<!-- Section Adopt -->
+      <section id="adoption" class="pages">
+         <div class="jumbotron"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+            <!-- Heading -->
+            <div class="jumbo-heading"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+               <h1>Adoption</h1>
+            </div>
+         </div>
+         <!-- container-->
+         <div class="container">
+            <!-- row -->
+            {% for i in object_list%}
+            <div class="row">
+               <div class="col-xl-6 text-center mb-0 mb-lg-4">
+                  <!-- image -->
+                  <img src="{{i.photo.url}}" alt="" class="center-block img-fluid img-rounded">
+               </div>
+               <!-- /col -->
+               <div class="col-xl-6 res-margin">
+                  <h2>{{i.title}}</h2>
+                  <p>{{i.sub_title}}</p>
+                  <h4>{{i.about_title}}</h4>
+                  <ul class="custom no-margin">
+                     <li>{{i.about_sub_title}}</li>
+                  </ul>
+                  <!-- /ul custom-->
+               </div>
+               <!-- /col -->
+            </div>
+            {% endfor %}
+            <!-- row -->
+            <div class="row margin1">
+               <!-- Navigation -->
+               <!-- centered navigation -->
+               <ul class="nav nav-pills category-isotope justify-content-center mt-5">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#" data-bs-toggle="tab" data-filter="*">All</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#" data-bs-toggle="tab" data-filter=".dog">Only Dogs</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#" data-bs-toggle="tab" data-filter=".cat">Only Cats</a>
+                  </li>
+               </ul>
+               <!-- /ul -->
+               <!-- Adoption gallery -->
+               <div class="col-lg-12 margin1">
+                  <div id="lightbox">
+                     <!-- Image 1 -->
+                     {% for post in object_list %}
+                     <div class="col-lg-4 dog">
+                        <div class="isotope-item">
+                           <div class="adoption-thumb">
+                              <img class="img-fluid rounded-circle" src="{{post.petz_img.url}}" alt=""> 
+                              <!-- header-->							  
+                              <div class="adopt-header">
+                                 <h4>{{post.petz_name}}</h4>
+                                 <p>{{post.petz_news}}</p>
+                                 <a class="btn" href="adopt-single.html">More info</a>
+                              </div>
+                           </div>
+                        </div>
+                        <!--/isotope-item -->
+                     </div>
+                     {% endfor %}
+                     <!-- col-lg-->
+                     <!-- col-lg-->
+                  </div>
+                  <!-- /lightbox-->
+               </div>
+               <!-- /col-lg-12 -->      
+            </div>
+            <!-- /row--> 
+         </div>
+
+         <!-- /container-->
+      </section>
+      <!-- /Section ends -->
+{% endblock %}
