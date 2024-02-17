@@ -1,11 +1,9 @@
 from django.urls import path
-from blog import views
-from adoption.views import AdoptionView
+from . import views
 
 app_name = 'adoption'
 
-urlpatterns = [ 
-    path('adoption/', AdoptionView.as_view(), name='adoption'),
-    path('adoption_name/', AdoptionView.as_view(), name='adoption_name'),
-]              
-               
+urlpatterns = [
+    path('adoption/', views.adoption, name='adoption'),
+    path('adoption_detail/<int:id>/', views.detail_page, name='adoption_detail'),
+]

@@ -1,0 +1,65 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+      <!-- Section Team -->
+      <section id="adoption" class="pages">
+         <div class="jumbotron"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+            <!-- Heading -->
+            <div class="jumbo-heading"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+               <h1>Our Team</h1>
+            </div>
+         </div>
+         <!-- container-->
+         <div class="container">
+            {% for i in our_team %}
+            <div class="row text-center">
+               <div class="col-lg-10 offset-lg-1">
+                  <h2>{{ i.title }}</h2>
+                  <p>{{ i.sub_title }}</p>
+               </div>
+               <!-- /col-lg-10 -->
+            </div>
+            {% endfor %}
+            <!-- /row -->
+            <div class="row margin1">
+               <div class="slider-4">
+                  <!-- Team member 1 -->
+                  {% for author in author %}
+                  <div class="team-wrap p-3">
+                     <div class="member text-center">
+                        <div class="wrap">
+                           <!-- Info -->
+                           <div class="info">
+                              <h3 class="name">{{ author.author }}</h3>
+                              <h4 class="position">{{ author.job }}</h4>
+                           </div>
+                           <!-- /info -->
+                           <!-- image -->
+                           <img src="{{ author.image.url }}" alt="" class="rounded-circle img-fluid">                           
+                        </div>
+                        <!-- /wrap -->
+                        <div class="more">
+                           <p>{{author.author_about}}</p>
+                           <!-- Description -->
+                           <div class="social-media smaller">
+                              <a href="#" title="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                              <a href="#" title="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                              <a href="#" title="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                           </div>
+                           <!-- /social-media -->
+                        </div>
+                        <!-- /more -->
+                     </div>
+                     <!-- / member -->
+                  </div>
+                  {% endfor %}
+                  <!--/ team-wrap -->
+               </div>
+               <!-- /slider--> 
+            </div>
+            <!-- /row--> 
+         </div>
+         <!-- /container-->
+      </section>
+      <!-- /Section ends -->
+{% endblock %}

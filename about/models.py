@@ -2,7 +2,7 @@ from django.db import models
 from contact.abstract import BaseModel
 
 
-class About(models.Model):
+class About(BaseModel):
     title = models.CharField(max_length=150, help_text='messege')
     sub_title = models.TextField(max_length=300, help_text='sub_title')
     photo = models.ImageField(upload_to='about/%Y/%m/%d', help_text='photo')

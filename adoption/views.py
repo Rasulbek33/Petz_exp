@@ -1,21 +1,13 @@
-from typing import Any
-from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.views.generic import ListView
 from adoption.models import Adoption, Adoption_name
+from django.shortcuts import get_object_or_404
 
 
-class AdoptionView(ListView):
-    template_name = 'adoption.html'
+def adoption(request):
+    adoption = Adoption.objects.all()
+    adoption_name = Adoption_name.objects.all()
+    return render(request, 'adoption.html', {'adoption': adoption, 'adoption_name': adoption_name})
 
-    def get_queryset(self):
-        qs = Adoption.objects.all()
-        return qs
-
-class Adoption_nameView(ListView):
-    template_name = 'adoption.html'
-
-
-    def get_queryset(self):
-        qs = Adoption_name.objects.all()
-        return qs
+def detail_page(request, id):
+    obj = get_object_or_404(Adoption, pk=id)
+    return render(request, 'adopt-single.html', {'obj': obj})

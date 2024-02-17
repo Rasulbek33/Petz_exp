@@ -1,5 +1,5 @@
 {% extends 'layouts/base.html'%}
-{% load static %}
+{% load static i18n %}
 {% block content %}
       <!-- Section About -->
       <section id="about" class="pages">
@@ -74,8 +74,8 @@
                            <i class="flaticon-animals-3"></i>
                         </div>
                         <div class="col-12">
-                           <h5>Special Care</h5>
-                           <p>Aenean lacinia bibendum nulla sed consectetur ras mattis consectetur purus sit amet fermentum sociis natoque penatibus et magnis.</p>
+                           <h5>{% translate 'Special Care'%}</h5>
+                           <p>{% translate 'Aenean lacinia bibendum nulla sed consectetur ras mattis consectetur purus sit amet fermentum sociis natoque penatibus et magnis'%}</p>
                         </div>
                      </div>
                      <!-- /col-lg-3 -->
@@ -87,10 +87,8 @@
             <!-- /margin1 -->
             <div class="row margin1">
                <div class="col-lg-6 my-auto res-margin">
-                  <h3>How We Started</h3>
-                  <p>Ibu lum orci eget, viverra elit. Aliquam erat volut pat phas ellus ac
-                     sodales felis tiam non Doloreiur qui commolu ptatemp dolupta orem retibusam 
-                  </p>
+                  <h3>{% translate 'How We Started'%}</h3>
+                  <p>{% translate 'Ibu lum orci eget, viverra elit. Aliquam erat volut pat phas ellus acsodales felis tiam non Doloreiur qui commolu ptatemp dolupta orem retibusam '%}</p>
                   <p>Andigen Ibu lum orci eget, viverra elit. Aliquam erat volut pat phas ellus ac sodales felis tiam non metus.
                      Placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget,Fusce mollis imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit liquam erat volut pat phas ellus ac sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis.
                   </p>
@@ -106,7 +104,7 @@
                      <div class="accordion-item">
                         <p class="accordion-header" id="headingOne">
                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           Social Responsability
+                           {% translate 'Social Responsability'%}
                            </button>
                         </p>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion1">

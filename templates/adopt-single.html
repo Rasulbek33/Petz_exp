@@ -1,0 +1,51 @@
+{% extends 'layouts/base.html'%}
+{% block content %}
+      <!-- Section Adoption -->
+      <section id="adoption" class="pages">
+         <div class="jumbotron"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+            <!-- Heading -->
+            <div class="jumbo-heading"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+               <h1>Adopt Single Page</h1>
+            </div>
+         </div>
+         <!-- container-->
+         <div class="container">
+            <!-- Breadcrumb -->
+            <ul class="breadcrumb adopt">
+               <li><a href="adoption.html">Adoption Gallery</a> <span class="divider"></span></li>
+               <li class="active">Pet Name</li>
+            </ul>
+         </div>
+         <div class="container margin1">
+            {% for i in adoption_name %}
+            <div class="row">
+               <div class="col-lg-5">
+                  <img src="{{ i.petz_img.url }}" class="center-block img-rounded img-fluid" alt="">
+               </div>
+               <div class="col-lg-7 res-margin">
+                  <h2>{{ i.petz_name }}</h2>
+                  <div class="pet-adopt-info">
+                     <h6>Gender: female</h6>
+                     <h6>Neutered: Yes</h6>
+                     <h6>Vaccinated: Yes</h6>
+                  </div>
+                  <p>{{i.petz_news}}</p>
+                  <!-- ul custom-->
+                  <ul class="custom no-margin">
+                     <li>Aliquam erat volut pat.</li>
+                     <li>Ibu lum orci eget, viverra elit liquam erat volut pat phas ellus ac.</li>
+                     <li>Aliquam erat volut pat phas ellu</li>
+                  </ul>
+                  <a href="#" class="btn">Adopt now!</a>
+               </div>
+               <!-- /col-lg-7-->
+            </div>
+            {% endfor %}
+            <!-- /row -->
+         </div>
+         <!-- /container -->
+      </section>
+      <!-- /Section ends -->
+
+
+{% endblock %}

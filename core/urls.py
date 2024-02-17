@@ -9,16 +9,19 @@ urlpatterns = [
     path('', include('contact.urls')),
     path('', include('main.urls', namespace='default_1')),
     path('', include('blog.urls', namespace='default_2')),
-    path('', include('about.urls')),
+    path('', include('about.urls', namespace='default_3')),
     path('', include('gallery.urls')),
     path('', include('adoption.urls')),
-    path('', include('our_services.urls'))
+    path('', include('our_services.urls')),
+    path('', include('our_team.urls')),
+    path('', include('pricing.urls'))
 ]
 
 
 urlpatterns += i18n_patterns(
     path('', include('main.urls')),
     path('', include('blog.urls')),
+    path('', include('about.urls'))
 )
 
 

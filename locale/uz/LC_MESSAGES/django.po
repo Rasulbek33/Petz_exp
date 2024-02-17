@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-03 16:08+0500\n"
-"PO-Revision-Date: 2024-02-03 16:12+0500\n"
+"POT-Creation-Date: 2024-02-15 14:55+0500\n"
+"PO-Revision-Date: 2024-02-15 14:56+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uz\n"
@@ -72,13 +72,37 @@ msgstr "uy"
 msgid "Homes"
 msgstr "uylar"
 
+#: templates/about.html:78
+msgid ""
+"Aenean lacinia bibendum nulla sed consectetur ras mattis consectetur purus "
+"sit amet fermentum sociis natoque penatibus et magnis"
+msgstr ""
+
+#: templates/about.html:90
+msgid "How We Started"
+msgstr ""
+"\n"
+"Biz qanday boshladik"
+
+#: templates/about.html:91
+msgid ""
+"Ibu lum orci eget, viverra elit. Aliquam erat volut pat phas ellus acsodales "
+"felis tiam non Doloreiur qui commolu ptatemp dolupta orem retibusam "
+msgstr ""
+"Ibu lum orci eget, viverra elit. Aliquam erat volut pat phas ellus acsodales "
+"felis tiam non Doloreiur qui commolu ptatemp dolupta orem retibusam "
+
+#: templates/about.html:107
+msgid "Social Responsability"
+msgstr "Ijtimoiy javobgarlik"
+
 #: templates/blog.html:9
 #, fuzzy
 #| msgid "Blog Home"
 msgid "Blog"
 msgstr "Blog uyi"
 
-#: templates/blog.html:19 templates/layouts/base.html:96
+#: templates/blog.html:19 templates/layouts/base.html:90
 msgid "Blog Home"
 msgstr "Blog uyi"
 
@@ -142,8 +166,8 @@ msgstr "bizning xizmatimiz"
 msgid "We offer all the best quality products for your best friend."
 msgstr ""
 "\n"
-"Sizning eng yaxshi do'stingiz uchun barcha eng sifatli mahsulotlarni "
-"taklif etamiz."
+"Sizning eng yaxshi do'stingiz uchun barcha eng sifatli mahsulotlarni taklif "
+"etamiz."
 
 #: templates/home.html:56
 msgid "About Us"
@@ -192,49 +216,43 @@ msgid "Adoption"
 msgstr "asrab olmoq"
 
 #: templates/layouts/base.html:77
-msgid "Adoption Single"
-msgstr "asrab olish"
-
-#: templates/layouts/base.html:78
 msgid "Our Services"
 msgstr "bizning xizmatlar"
 
-#: templates/layouts/base.html:80
-msgid "Our Team"
-msgstr "bizning jamoa"
-
-#: templates/layouts/base.html:81
-msgid "Pricing"
-msgstr "narx"
-
-#: templates/layouts/base.html:82
-msgid "Testimonials"
-msgstr "guvoh"
-
 #: templates/layouts/base.html:83
-msgid "Elements"
-msgstr "element"
-
-#: templates/layouts/base.html:89
 msgid "Gallery"
 msgstr "rasmlar"
 
-#: templates/layouts/base.html:97
-msgid "Blog Post"
-msgstr "postlar"
-
-#: templates/layouts/base.html:101
+#: templates/layouts/base.html:94
 msgid "Contact"
 msgstr "Aloqa"
 
-#: templates/layouts/base.html:138
+#: templates/layouts/base.html:131
 msgid "123 Anywhere Street, London, LO4 6ON"
 msgstr "123 london kochasining LO4 60N joyida"
 
-#: templates/layouts/base.html:143
+#: templates/layouts/base.html:136
 msgid "Follow us"
 msgstr "Ortimizdan yuring"
 
-#: templates/layouts/base.html:158
+#: templates/layouts/base.html:151
 msgid "Copyright © 2017-2023 Designed by"
 msgstr "Mualliflik huquqi © 2017-2023 tomonidan ishlab chiqilgan"
+
+#~ msgid "Adoption Single"
+#~ msgstr "asrab olish"
+
+#~ msgid "Our Team"
+#~ msgstr "bizning jamoa"
+
+#~ msgid "Pricing"
+#~ msgstr "narx"
+
+#~ msgid "Testimonials"
+#~ msgstr "guvoh"
+
+#~ msgid "Elements"
+#~ msgstr "element"
+
+#~ msgid "Blog Post"
+#~ msgstr "postlar"

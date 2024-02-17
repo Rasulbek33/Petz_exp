@@ -1,8 +1,8 @@
 from django.db import models
+from contact.abstract import BaseModel
 
 
-
-class Our_Service(models.Model):
+class Our_Service(BaseModel):
     title = models.CharField(max_length=100, help_text='title')
     sub_title = models.CharField(max_length=255, help_text='sub_title')
     helping = models.CharField(max_length=100, help_text='helping', blank=True)

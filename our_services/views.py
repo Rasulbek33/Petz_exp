@@ -1,14 +1,11 @@
 from django.shortcuts import render
-from django.views.generic import ListView
 from our_services.models import Our_Service, About_petz
 
-class Our_serviceView(ListView):
-    queryset = Our_Service.objects.order_by('-id')
-    paginate_by = 5
 
-    template_name = 'services.html'
 
-    def get_context_data(self, **kwargs):
-        data= super().get_context_data(**kwargs)
-        data['titles'] =  About_petz.objects.all()
-        return data
+
+
+def our_service(request):
+    our_service = Our_Service.objects.all()
+    about_petz = About_petz.objects.all()
+    return render(request, 'services.html', {'our_service': our_service, 'about_petz': about_petz})

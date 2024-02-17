@@ -1,0 +1,64 @@
+{% extends 'layouts/base.html'%}
+{% load static %}
+{% block content %}
+      <!-- Section Pricing -->
+      <section id="pricing" class="pages">
+         <div class="jumbotron"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+            <!-- Heading -->
+            <div class="jumbo-heading"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -80px;" data-bottom-top="background-position: 50% 80px;">
+               <h1>Pricing</h1>
+            </div>
+         </div>
+         <!-- container -->
+         <div class="container">
+            {% for i in our_plans%}
+            <div class="row">
+               <div class="col-lg-7 my-auto">
+                  <h2>{{i.title}}</h2>
+                  <p>{{ i.sub_title }}</p>
+                  <a class="btn" href="{% url 'contact:contact'%}">Contact us</a>
+               </div>
+               <!-- /col-lg-6 -->
+               <!-- image -->
+               <div class="col-lg-3 offset-lg-1 mx-auto">
+                  <img src="{{ i.img.url }}" alt="" class="center-block img-fluid">
+               </div>
+               <!-- /col-lg-3 -->
+            </div>
+            {% endfor %}
+            <!-- /row -->
+            <div class="price-table margin1">
+               <div class="row">
+                  <!-- Price table 1 -->
+                  {% for obj in pricing%}
+                  <div class="col-lg-6 col-xl-3">
+                     <div class="plan">
+                        <!-- price table header -->
+                        <header>
+                           <i class="flaticon-track"></i>
+                           <h5 class="plan-title">{{ obj.direction}}</h5>
+                           <div class="plan-cost"><span class="plan-price">${{obj.price}}</span></div>
+                        </header>
+                        <!-- plan features -->
+                        <ul class="plan-features">
+                           <li>{{obj.species}}</li>
+                        </ul>
+                        <!-- /plan features -->
+                        <!-- button -->
+                        <div class="text-center">
+                           <a class="btn" href="contact.html">Contact us</a>
+                        </div>
+                        <!-- /text-center -->  
+                     </div>
+                  </div>
+                  {% endfor %}
+                  <!-- /Price table 1 -->
+               </div>
+               <!-- /row -->
+            </div>
+            <!-- /Price tables  ends -->
+         </div>
+         <!-- /container-->
+      </section>
+      <!-- /Section ends -->
+{% endblock %}

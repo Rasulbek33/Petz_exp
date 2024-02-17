@@ -1,6 +1,8 @@
 from django.db import models
+from contact.abstract import BaseModel
 
-class Gallery(models.Model):
+
+class Gallery(BaseModel):
     photo = models.ImageField(upload_to='gallery/%Y/%m/%d', help_text='photo')
     photo_messege = models.CharField(max_length=50, help_text='photo_news')
 

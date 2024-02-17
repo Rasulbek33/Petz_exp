@@ -29,3 +29,5 @@ class Adoption_name(models.Model):
     class Meta:
         verbose_name = 'Adoption_name'
         verbose_name_plural = 'Adoption_names'
+
+
